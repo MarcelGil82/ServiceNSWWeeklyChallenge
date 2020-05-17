@@ -49,7 +49,7 @@ async function Program() {
                 console.log(`You have selected: ${myPlayer.playerName}. He is ${myPlayer.age} years old and plays as a ${myPlayer.position}.`);
             }   else    
                        if (userInput == "5") {
-                console.log("Thank you for visiting the Western Sydney Wanderers Squad.");
+                console.log("Thank you for visiting the Western Sydney Wanderers Squad!");
                 break;
             }
         }
