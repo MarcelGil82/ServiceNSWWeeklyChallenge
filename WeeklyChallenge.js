@@ -43,20 +43,12 @@ async function Program() {
             console.log("[4] Keanu Baccus");
             console.log("[5] Exit");
             let userInput = await askQuestion("Enter number for corresponding player bio: ");
-            
-            if (userInput == "1") {
-                console.log(`You have selected: ${playerName}. He is ${age} years old and plays as a ${position}.`);
-            }   else      
-            if (userInput == "2") {
-                console.log("You have selected: Daniel Lopar, he is age years old and plays as a position");
-            }   else
-            if (userInput == "3") {
-                console.log("You have selected: Daniel Georgievski, he is age years old and plays as a position");
-            }   else
-            if (userInput == "4") {
-                console.log("You have selected: Keanu Baccus, he is age years old and plays as a position");
-            }   else
-            if (userInput == "5") {
+            let myIndex = parseInt(userInput) -1;
+            if (userInput < wanderers.length) {
+                let myPlayer = wanderers[myIndex]
+                console.log(`You have selected: ${myPlayer.playerName}. He is ${myPlayer.age} years old and plays as a ${myPlayer.position}.`);
+            }   else    
+                       if (userInput == "5") {
                 console.log("Thank you for visiting the Western Sydney Wanderers Squad.");
                 break;
             }
